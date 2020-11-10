@@ -164,7 +164,7 @@
     color: transparent;
     border-radius: 50%;
     outline: none;
-    background: #322b4c;
+    background: #42455E;
     -webkit-transition: border-color .3s;
     -o-transition: border-color .3s;
     transition: border-color .3s;
@@ -190,7 +190,7 @@
     content: '';
     width: 10px;
     height: 10px;
-    background: #8e79da;
+    background: #42455E;
     opacity: 1;
     border-radius: 50%;
     top: 50%;

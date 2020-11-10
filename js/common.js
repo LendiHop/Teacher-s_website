@@ -8,53 +8,9 @@ $(document).ready(function() {
 /*Слайдер*/
 	$('.sl').slick({
 		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 6000,
 		cssEase: 'ease-in',
-		dots: true,
-		asNavFor: '.sl2'
-	});
-
-	$('.sl2').slick({
-		slidesToShow: 7,
-		centerMode: true,
-		centerPadding: '40px',
-		asNavFor: '.sl',
-		focusOnSelect: true,
-		arrows: false,
-		responsive: [
-				{
-				breakpoint: 1100,
-				settings: {
-					slidesToShow: 6
-				}
-			},
-				{
-				breakpoint: 960,
-				settings: {
-					slidesToShow: 5
-				}
-			},
-				{
-				breakpoint: 800,
-				settings: {
-					slidesToShow: 4
-				}
-			},
-				{
-				breakpoint: 640,
-				settings: {
-					slidesToShow: 3,
-					dots: false
-				}
-			},
-				{
-				breakpoint: 480,
-				settings: {
-					dots: false,
-					slidesToShow: 3
-				}
-			},
-		]
+		dots: true
 	});
 
 //Мега-меню и мобайл меню
@@ -72,9 +28,17 @@ $(document).ready(function() {
 		navbar: {
 			title: "Меню",
 		},
-			navbars: [{
+			navbars: [
+			{
+				position: "top",
 				content: ["searchfield"]
-			},
+				},
+			{
+				content: [
+					"<a href='#/'>Вхід</a>",
+					"<a href='#/'>Реєстрація</a>"
+									]
+				},
 			{
 				position: "bottom",
 				content: [
@@ -162,13 +126,13 @@ $(document).ready(function() {
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("form").submit(function() {
+	$("#callback").submit(function() {
 		$.ajax({
 			type: "GET",
 			url: "mail.php",
-			data: $("form").serialize()
+			data: $("#callback").serialize()
 		}).done(function() {
-			alert("Спасибо за заявку!");
+			alert("Я обов'язково прочитаю ваше повідомлення");
 			setTimeout(function() {
 				$.fancybox.close();
 			}, 1000);
