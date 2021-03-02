@@ -26,7 +26,7 @@ $(document).ready(function() {
 		.parent().mmenu({
 		extensions : ["effect-menu-zoom", "effect-panels-zoom",'theme-white', 'pagedim-black'],
 		navbar: {
-			title: "Меню",
+			title: "Menu",
 		},
 			navbars: [
 			{
@@ -34,22 +34,16 @@ $(document).ready(function() {
 				content: ["searchfield"]
 				},
 			{
-				content: [
-					"<a href='#/'>Вхід</a>",
-					"<a href='#/'>Реєстрація</a>"
-									]
-				},
-			{
 				position: "bottom",
 				content: [
-					"<a class='fa fa-envelope' href='#/'></a>",
-					"<a class='fa fa-odnoklassniki' href='#/'></a>",
-					"<a class='fa fa-vk' href='#/'></a>"
+					"<a class='fa fa-envelope' href='https://www.google.com/intl/ru/gmail/about/'></a>",
+					"<a class='fa fa-odnoklassniki' href='https://ok.ru/'></a>",
+					"<a class='fa fa-vk' href='https://vk.com/'></a>"
 									]
 							}],
 			searchfield: {
-				noResults: "Вибачте, нічого не знайдено.",
-				placeholder: "Пошук"
+				noResults: "Nic nie znaleziono",
+				placeholder: "Wyszukiwana fraza"
 			}
 	});
 
@@ -132,7 +126,7 @@ $(document).ready(function() {
 			url: "mail.php",
 			data: $("#callback").serialize()
 		}).done(function() {
-			alert("Я обов'язково прочитаю ваше повідомлення");
+			alert("Obowiazkowo przeczytam twoje powiadomienie.");
 			setTimeout(function() {
 				$.fancybox.close();
 			}, 1000);

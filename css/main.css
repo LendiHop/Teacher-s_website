@@ -408,7 +408,6 @@ div.col-lg-4, .col-md-4 {
 .blog_content {
 	float: left;
 	width: 855px; 
-	min-height: 1140px;
 	background: transparent;
 	margin-top: 44px;
 	border: 1px solid #42455E;
